@@ -3,6 +3,7 @@ import json
 from db import db
 from flask import Flask, request
 import os
+from db import User
 
 app = Flask(__name__)
 db_filename = "shelter_swipe.db"
@@ -22,7 +23,14 @@ def failure_response(message, code=404):
     return json.dumps({"error": message}), code
 
 # ROUTES -----------------------------------------
-@app.route("/")
+@app.route("/api/users/", methods = ["GET"])
+def get_users():
+    """
+    Endpoint for getting all users
+    """
+    users = [user.serialize() for user in User.query.all()]
+
+    return success_response({"users": users}, 201)
 
 @app.route("/api/users/", methods = ["POST"])
 def create_user():

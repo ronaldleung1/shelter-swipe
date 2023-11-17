@@ -30,7 +30,7 @@ class User(db.Model):
         """
         self.name = kwargs.get("name", "")
         self.species_pref = kwargs.get("species_pref", "")
-        self.species_pref = kwargs.get("age_pref", "")
+        self.age_pref = kwargs.get("age_pref", "")
 
     def serialize(self):
         """
@@ -66,7 +66,7 @@ class Pet(db.Model):
     breed = db.Column(db.String, nullable = False)
     age = db.Column(db.Integer, nullable = False)
     likes = db.Column(db.String, nullable = True)
-    shelter_id = db.Column(db.Integer, db.ForeignKey("shelters.id", nullable = False))
+    shelter_id = db.Column(db.Integer, db.ForeignKey("shelters.id"), nullable = False)
     users = db.relationship("User", secondary = user_pet, back_populates="pets")
 
     def __init__(self, **kwargs):
@@ -77,7 +77,7 @@ class Pet(db.Model):
         self.species = kwargs.get("species", "")
         self.breed = kwargs.get("breed", "")
         self.age = kwargs.get("age", "")
-        self.likes = kwargs.get("likes","")
+        self.likes = kwargs.get("likes", "")
         self.shelter_id = kwargs.get("shelter_id")
 
     def serialize(self):
