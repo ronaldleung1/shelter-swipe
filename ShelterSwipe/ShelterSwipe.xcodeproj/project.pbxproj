@@ -15,6 +15,7 @@
 		C37C03EB2B099F6F0097B4AF /* ShelterSwipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */; };
 		C37C03ED2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */; };
 		C37C03FA2B09A1E60097B4AF /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03F92B09A1E60097B4AF /* SavedView.swift */; };
+		C3D6CEF52B0AA1EE00C266FF /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6CEF42B0AA1EE00C266FF /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeUITests.swift; sourceTree = "<group>"; };
 		C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C37C03F92B09A1E60097B4AF /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		C3D6CEF42B0AA1EE00C266FF /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		C37C03FF2B09A24E0097B4AF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C3D6CEF42B0AA1EE00C266FF /* Animal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C37C03D22B099F620097B4AF /* ContentView.swift in Sources */,
+				C3D6CEF52B0AA1EE00C266FF /* Animal.swift in Sources */,
 				C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */,
 				C37C03FA2B09A1E60097B4AF /* SavedView.swift in Sources */,
 			);
