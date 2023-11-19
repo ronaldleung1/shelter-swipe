@@ -42,8 +42,7 @@ def create_user():
         return failure_response("Missing information to create a new user", 400)
     new_user = User(
         name = body.get("name"),
-        species_pref = body.get("species_pref"),
-        age_pref = body.get("age_pref")
+        location = body.get("location")
     )
     db.session.add(new_user)
     db.session.commit()

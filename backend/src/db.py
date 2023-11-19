@@ -18,10 +18,8 @@ class User(db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key = True, autoincrement = True)
     name = db.Column(db.String, nullable = False)
-    # these might not work easily if we try to retrieve only preferred pets
-    species_pref = db.Column(db.String, nullable = True)
-    # int or string?
-    age_pref = db.Column(db.Integer, nullable = True)
+    location = db.Column(db.String, nullable = False)
+
     pets = db.relationship("Pet", secondary = user_pet, back_populates="users")
 
     def __init__(self, **kwargs):
@@ -29,8 +27,6 @@ class User(db.Model):
         Initialize a User object
         """
         self.name = kwargs.get("name", "")
-        self.species_pref = kwargs.get("species_pref", "")
-        self.age_pref = kwargs.get("age_pref", "")
 
     def serialize(self):
         """
@@ -39,8 +35,7 @@ class User(db.Model):
         return {
             "id": self.id,
             "name": self.name,
-            "species_pref": self.species_pref,
-            "age_pref": self.age_pref,
+            "location": self.location,
             "pets": [p.simple_serialize() for p in self.pets]
         }
     
@@ -51,8 +46,7 @@ class User(db.Model):
         return {
             "id": self.id,
             "name": self.name,
-            "species_pref": self.species_pref,
-            "age_pref": self.age_pref
+            "location": self.location
         }
 
 class Pet(db.Model):
