@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03CF2B099F620097B4AF /* ShelterSwipeApp.swift */; };
+		C37C03D22B099F620097B4AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03D12B099F620097B4AF /* ContentView.swift */; };
+		C37C03D42B099F6D0097B4AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37C03D32B099F6D0097B4AF /* Assets.xcassets */; };
+		C37C03D72B099F6D0097B4AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37C03D62B099F6D0097B4AF /* Preview Assets.xcassets */; };
+		C37C03E12B099F6E0097B4AF /* ShelterSwipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03E02B099F6E0097B4AF /* ShelterSwipeTests.swift */; };
+		C37C03EB2B099F6F0097B4AF /* ShelterSwipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */; };
+		C37C03ED2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C37C03DD2B099F6E0097B4AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C37C03C42B099F620097B4AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C37C03CB2B099F620097B4AF;
+			remoteInfo = ShelterSwipe;
+		};
+		C37C03E72B099F6F0097B4AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C37C03C42B099F620097B4AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C37C03CB2B099F620097B4AF;
+			remoteInfo = ShelterSwipe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C37C03CC2B099F620097B4AF /* ShelterSwipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShelterSwipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37C03CF2B099F620097B4AF /* ShelterSwipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeApp.swift; sourceTree = "<group>"; };
+		C37C03D12B099F620097B4AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C37C03D32B099F6D0097B4AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C37C03D62B099F6D0097B4AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C37C03DC2B099F6E0097B4AF /* ShelterSwipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelterSwipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37C03E02B099F6E0097B4AF /* ShelterSwipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeTests.swift; sourceTree = "<group>"; };
+		C37C03E62B099F6F0097B4AF /* ShelterSwipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelterSwipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeUITests.swift; sourceTree = "<group>"; };
+		C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C37C03C92B099F620097B4AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37C03D92B099F6E0097B4AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37C03E32B099F6F0097B4AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C37C03C32B099F620097B4AF = {
+			isa = PBXGroup;
+			children = (
+				C37C03CE2B099F620097B4AF /* ShelterSwipe */,
+				C37C03DF2B099F6E0097B4AF /* ShelterSwipeTests */,
+				C37C03E92B099F6F0097B4AF /* ShelterSwipeUITests */,
+				C37C03CD2B099F620097B4AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C37C03CD2B099F620097B4AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C37C03CC2B099F620097B4AF /* ShelterSwipe.app */,
+				C37C03DC2B099F6E0097B4AF /* ShelterSwipeTests.xctest */,
+				C37C03E62B099F6F0097B4AF /* ShelterSwipeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C37C03CE2B099F620097B4AF /* ShelterSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				C37C03CF2B099F620097B4AF /* ShelterSwipeApp.swift */,
+				C37C03D12B099F620097B4AF /* ContentView.swift */,
+				C37C03D32B099F6D0097B4AF /* Assets.xcassets */,
+				C37C03D52B099F6D0097B4AF /* Preview Content */,
+			);
+			path = ShelterSwipe;
+			sourceTree = "<group>";
+		};
+		C37C03D52B099F6D0097B4AF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C37C03D62B099F6D0097B4AF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C37C03DF2B099F6E0097B4AF /* ShelterSwipeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C37C03E02B099F6E0097B4AF /* ShelterSwipeTests.swift */,
+			);
+			path = ShelterSwipeTests;
+			sourceTree = "<group>";
+		};
+		C37C03E92B099F6F0097B4AF /* ShelterSwipeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */,
+				C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */,
+			);
+			path = ShelterSwipeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C37C03CB2B099F620097B4AF /* ShelterSwipe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37C03F02B099F6F0097B4AF /* Build configuration list for PBXNativeTarget "ShelterSwipe" */;
+			buildPhases = (
+				C37C03C82B099F620097B4AF /* Sources */,
+				C37C03C92B099F620097B4AF /* Frameworks */,
+				C37C03CA2B099F620097B4AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShelterSwipe;
+			productName = ShelterSwipe;
+			productReference = C37C03CC2B099F620097B4AF /* ShelterSwipe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C37C03DB2B099F6E0097B4AF /* ShelterSwipeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37C03F32B099F6F0097B4AF /* Build configuration list for PBXNativeTarget "ShelterSwipeTests" */;
+			buildPhases = (
+				C37C03D82B099F6E0097B4AF /* Sources */,
+				C37C03D92B099F6E0097B4AF /* Frameworks */,
+				C37C03DA2B099F6E0097B4AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C37C03DE2B099F6E0097B4AF /* PBXTargetDependency */,
+			);
+			name = ShelterSwipeTests;
+			productName = ShelterSwipeTests;
+			productReference = C37C03DC2B099F6E0097B4AF /* ShelterSwipeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C37C03E52B099F6F0097B4AF /* ShelterSwipeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37C03F62B099F6F0097B4AF /* Build configuration list for PBXNativeTarget "ShelterSwipeUITests" */;
+			buildPhases = (
+				C37C03E22B099F6F0097B4AF /* Sources */,
+				C37C03E32B099F6F0097B4AF /* Frameworks */,
+				C37C03E42B099F6F0097B4AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C37C03E82B099F6F0097B4AF /* PBXTargetDependency */,
+			);
+			name = ShelterSwipeUITests;
+			productName = ShelterSwipeUITests;
+			productReference = C37C03E62B099F6F0097B4AF /* ShelterSwipeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C37C03C42B099F620097B4AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C37C03CB2B099F620097B4AF = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					C37C03DB2B099F6E0097B4AF = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C37C03CB2B099F620097B4AF;
+					};
+					C37C03E52B099F6F0097B4AF = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C37C03CB2B099F620097B4AF;
+					};
+				};
+			};
+			buildConfigurationList = C37C03C72B099F620097B4AF /* Build configuration list for PBXProject "ShelterSwipe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C37C03C32B099F620097B4AF;
+			productRefGroup = C37C03CD2B099F620097B4AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C37C03CB2B099F620097B4AF /* ShelterSwipe */,
+				C37C03DB2B099F6E0097B4AF /* ShelterSwipeTests */,
+				C37C03E52B099F6F0097B4AF /* ShelterSwipeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C37C03CA2B099F620097B4AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37C03D72B099F6D0097B4AF /* Preview Assets.xcassets in Resources */,
+				C37C03D42B099F6D0097B4AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37C03DA2B099F6E0097B4AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37C03E42B099F6F0097B4AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C37C03C82B099F620097B4AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37C03D22B099F620097B4AF /* ContentView.swift in Sources */,
+				C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37C03D82B099F6E0097B4AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37C03E12B099F6E0097B4AF /* ShelterSwipeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37C03E22B099F6F0097B4AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37C03EB2B099F6F0097B4AF /* ShelterSwipeUITests.swift in Sources */,
+				C37C03ED2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C37C03DE2B099F6E0097B4AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C37C03CB2B099F620097B4AF /* ShelterSwipe */;
+			targetProxy = C37C03DD2B099F6E0097B4AF /* PBXContainerItemProxy */;
+		};
+		C37C03E82B099F6F0097B4AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C37C03CB2B099F620097B4AF /* ShelterSwipe */;
+			targetProxy = C37C03E72B099F6F0097B4AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C37C03EE2B099F6F0097B4AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C37C03EF2B099F6F0097B4AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C37C03F12B099F6F0097B4AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShelterSwipe/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassidy.ShelterSwipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C37C03F22B099F6F0097B4AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShelterSwipe/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassidy.ShelterSwipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C37C03F42B099F6F0097B4AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassidy.ShelterSwipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShelterSwipe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShelterSwipe";
+			};
+			name = Debug;
+		};
+		C37C03F52B099F6F0097B4AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassidy.ShelterSwipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShelterSwipe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShelterSwipe";
+			};
+			name = Release;
+		};
+		C37C03F72B099F6F0097B4AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassidy.ShelterSwipeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShelterSwipe;
+			};
+			name = Debug;
+		};
+		C37C03F82B099F6F0097B4AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassidy.ShelterSwipeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShelterSwipe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C37C03C72B099F620097B4AF /* Build configuration list for PBXProject "ShelterSwipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37C03EE2B099F6F0097B4AF /* Debug */,
+				C37C03EF2B099F6F0097B4AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37C03F02B099F6F0097B4AF /* Build configuration list for PBXNativeTarget "ShelterSwipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37C03F12B099F6F0097B4AF /* Debug */,
+				C37C03F22B099F6F0097B4AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37C03F32B099F6F0097B4AF /* Build configuration list for PBXNativeTarget "ShelterSwipeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37C03F42B099F6F0097B4AF /* Debug */,
+				C37C03F52B099F6F0097B4AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37C03F62B099F6F0097B4AF /* Build configuration list for PBXNativeTarget "ShelterSwipeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37C03F72B099F6F0097B4AF /* Debug */,
+				C37C03F82B099F6F0097B4AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C37C03C42B099F620097B4AF /* Project object */;
+}
