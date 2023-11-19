@@ -14,6 +14,7 @@
 		C37C03E12B099F6E0097B4AF /* ShelterSwipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03E02B099F6E0097B4AF /* ShelterSwipeTests.swift */; };
 		C37C03EB2B099F6F0097B4AF /* ShelterSwipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */; };
 		C37C03ED2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */; };
+		C37C03FA2B09A1E60097B4AF /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03F92B09A1E60097B4AF /* SavedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C37C03E62B099F6F0097B4AF /* ShelterSwipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelterSwipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeUITests.swift; sourceTree = "<group>"; };
 		C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C37C03F92B09A1E60097B4AF /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,10 @@
 		C37C03CE2B099F620097B4AF /* ShelterSwipe */ = {
 			isa = PBXGroup;
 			children = (
+				C37C03FF2B09A24E0097B4AF /* Models */,
+				C37C03FD2B09A2210097B4AF /* Extensions */,
+				C37C03FC2B09A2100097B4AF /* Networking */,
+				C37C03FB2B09A1F60097B4AF /* Views */,
 				C37C03CF2B099F620097B4AF /* ShelterSwipeApp.swift */,
 				C37C03D12B099F620097B4AF /* ContentView.swift */,
 				C37C03D32B099F6D0097B4AF /* Assets.xcassets */,
@@ -125,6 +131,35 @@
 				C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */,
 			);
 			path = ShelterSwipeUITests;
+			sourceTree = "<group>";
+		};
+		C37C03FB2B09A1F60097B4AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C37C03F92B09A1E60097B4AF /* SavedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C37C03FC2B09A2100097B4AF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C37C03FD2B09A2210097B4AF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C37C03FF2B09A24E0097B4AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +294,7 @@
 			files = (
 				C37C03D22B099F620097B4AF /* ContentView.swift in Sources */,
 				C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */,
+				C37C03FA2B09A1E60097B4AF /* SavedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
