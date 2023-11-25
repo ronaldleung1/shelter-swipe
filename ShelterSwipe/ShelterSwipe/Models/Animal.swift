@@ -19,7 +19,7 @@ extension Animal {
     static let dummyData = [
         Animal(
             id: "",
-            name: "sldkfjdsl",
+            name: "Joe 🥏",
             species: "sldkfjslkdf",
             breed: "sldkslkdf",
             age: 5
@@ -30,6 +30,22 @@ extension Animal {
             name: "cassidu",
             species: "sldkfjslkdf",
             breed: "sldkslkdf",
+            age: 7
+            
+        ),
+        Animal(
+            id: "",
+            name: "slkga",
+            species: "hihihi",
+            breed: "sldkslkdf",
+            age: 11
+            
+        ),
+        Animal(
+            id: "",
+            name: "goodjslfkw",
+            species: "lsljl",
+            breed: "jjjjjj",
             age: 7
             
         )

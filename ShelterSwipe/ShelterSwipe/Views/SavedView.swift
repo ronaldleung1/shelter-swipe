@@ -22,13 +22,7 @@ struct SavedView: View {
             ForEach(animals, id: \.self) { animal in
                 animalCell(animal)
             }
-            //                ForEach(0..<10) {
-            //                    Text("Item \($0)")
-            //                        .foregroundStyle(.white)
-            //                        .font(.largeTitle)
-            //                        .frame(width: 200, height: 200)
-            //                        .background(.red)
-            //                }
+
         }
         .padding(.horizontal, 24)
     }
@@ -54,6 +48,7 @@ struct SavedView: View {
                 image
                     .resizable()
                     .frame(width: 120, height: 120, alignment: .leading)
+                    .cornerRadius(5)
             },
             placeholder: {
                 ProgressView()
@@ -62,13 +57,6 @@ struct SavedView: View {
         .frame(alignment: .leading)
     }
     
-//    var func cell (pet) some View {
-//        Text("Item \($0)")
-//            .foregroundStyle(.white)
-//            .font(.largeTitle)
-//            .frame(width: 200, height: 200)
-//            .background(.red)
-//    }
 }
 
 #Preview {
