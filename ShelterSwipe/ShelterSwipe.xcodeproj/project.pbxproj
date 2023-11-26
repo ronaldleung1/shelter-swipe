@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36237D432B13FF7F00EF6A1A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36237D422B13FF7F00EF6A1A /* LoginView.swift */; };
+		36237D462B1402BE00EF6A1A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36237D452B1402BE00EF6A1A /* String.swift */; };
+		36237D482B14044D00EF6A1A /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36237D472B14044D00EF6A1A /* SignupView.swift */; };
+		36237D4A2B14053100EF6A1A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36237D492B14053100EF6A1A /* AuthView.swift */; };
 		C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03CF2B099F620097B4AF /* ShelterSwipeApp.swift */; };
 		C37C03D22B099F620097B4AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03D12B099F620097B4AF /* ContentView.swift */; };
 		C37C03D42B099F6D0097B4AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37C03D32B099F6D0097B4AF /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36237D422B13FF7F00EF6A1A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		36237D452B1402BE00EF6A1A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = ShelterSwipe/Views/String.swift; sourceTree = SOURCE_ROOT; };
+		36237D472B14044D00EF6A1A /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		36237D492B14053100EF6A1A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		C37C03CC2B099F620097B4AF /* ShelterSwipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShelterSwipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37C03CF2B099F620097B4AF /* ShelterSwipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeApp.swift; sourceTree = "<group>"; };
 		C37C03D12B099F620097B4AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				C37C03F92B09A1E60097B4AF /* SavedView.swift */,
+				36237D422B13FF7F00EF6A1A /* LoginView.swift */,
+				36237D472B14044D00EF6A1A /* SignupView.swift */,
+				36237D492B14053100EF6A1A /* AuthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 		C37C03FD2B09A2210097B4AF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				36237D452B1402BE00EF6A1A /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,8 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36237D4A2B14053100EF6A1A /* AuthView.swift in Sources */,
+				36237D482B14044D00EF6A1A /* SignupView.swift in Sources */,
 				C37C03D22B099F620097B4AF /* ContentView.swift in Sources */,
 				C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */,
+				36237D462B1402BE00EF6A1A /* String.swift in Sources */,
+				36237D432B13FF7F00EF6A1A /* LoginView.swift in Sources */,
 				C37C03FA2B09A1E60097B4AF /* SavedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShelterSwipe/Preview Content\"";
+				DEVELOPMENT_TEAM = 37RDYDUAJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -465,6 +482,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,6 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShelterSwipe/Preview Content\"";
+				DEVELOPMENT_TEAM = 37RDYDUAJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -493,6 +512,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
