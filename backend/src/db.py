@@ -61,6 +61,7 @@ class Pet(db.Model):
     breed = db.Column(db.String, nullable = False)
     age = db.Column(db.Integer, nullable = False)
     description = db.Column(db.String, nullable = True)
+    photo_url = db.Column(db.String, nullable = False)
     shelter_id = db.Column(db.Integer, db.ForeignKey("shelters.id"), nullable = False)
     users = db.relationship("User", secondary = user_pet, back_populates="liked_pets")
 
@@ -73,6 +74,7 @@ class Pet(db.Model):
         self.breed = kwargs.get("breed", "")
         self.age = kwargs.get("age", "")
         self.description = kwargs.get("description", "")
+        self.photo_url = kwargs.get("photo_url", "")
         self.shelter_id = kwargs.get("shelter_id")
 
     def serialize(self):
@@ -86,6 +88,7 @@ class Pet(db.Model):
             "breed": self.breed,
             "age": self.age,
             "description": self.description,
+            "photo": self.photo_url,
             "shelter": self.shelter_id,
             "users": [u.simple_serialize() for u in self.users]
         }
@@ -101,6 +104,7 @@ class Pet(db.Model):
             "breed": self.breed,
             "age": self.age,
             "description": self.description,
+            "photo": self.photo_url,
             "shelter": self.shelter_id
         }
 
