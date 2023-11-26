@@ -100,7 +100,7 @@ class Pet(db.Model):
             "species": self.species,
             "breed": self.breed,
             "age": self.age,
-            "likes": self.likes,
+            "description": self.description,
             "shelter": self.shelter_id
         }
 
