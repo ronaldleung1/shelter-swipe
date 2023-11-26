@@ -49,6 +49,45 @@ def create_user():
     db.session.commit()
     return success_response(new_user.serialize(), 201)
 
+@app.route("/api/users/<int:user_id>/", methods = ["DELETE"])
+def delete_user(user_id):
+    """
+    Endpoint for deleting a user by id
+    """
+    user = User.query.filter_by(id = user_id).first()
+    if user is None:
+        return failure_response("User not found", 404)
+    db.session.delete(user)
+    db.session.commit()
+    return success_response(user.serialize(), 201)
+
+@app.route('/api/users/<int:user_id>/', methods=['POST'])
+def update_user(user_id):
+    """
+    Endpoint for updating a user by id
+    """
+    body = json.loads(request.data)
+    user = User.query.filter_by(id = user_id).first()
+    if user is None:
+        return failure_response("User not found")
+    
+    user.name = body.get("name", user.name)
+    user.location = body.get("location", user.location)
+    user.liked_pets = body.get("liked_pets", user.liked_pets)
+    
+    liked_pet_ids = body.get('liked_pets', [])
+    liked_pets = []
+    for pet_id in liked_pet_ids:
+        pet = Pet.query.filter_by(id=pet_id).first()
+        if pet is None:
+            return failure_response("Pet not found")
+        liked_pets.append(pet)
+
+    user.liked_pets = liked_pets
+    db.session.commit()
+
+    return user.serialize(), 200
+
 # PET ROUTES -----------------------------------------
 @app.route("/api/pets/", methods = ["GET"])
 def get_pets():
@@ -58,8 +97,6 @@ def get_pets():
     pets = [pet.serialize() for pet in Pet.query.all()]
 
     return success_response({"pets": pets}, 201)
-
-
 
 @app.route("/api/pets/", methods = ["POST"])
 def create_pet():
