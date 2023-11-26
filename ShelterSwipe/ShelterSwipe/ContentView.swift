@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let animals: [Animal] = Animal.dummyData
+    @State var animalIndex = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        if animalIndex < animals.count {
+            CardView(animalIndex: $animalIndex)
+        } else {
+            Text("No more cards")
         }
-        .padding()
+        
     }
+    
 }
 
 #Preview {
