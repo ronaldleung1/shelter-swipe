@@ -49,16 +49,14 @@ def create_user():
     db.session.commit()
     return success_response(new_user.serialize(), 201)
 
-@app.route("/api/users/<int:user_id>/", methods = ["DELETE"])
-def delete_user(user_id):
+@app.route('/api/users/<int:user_id>/', methods=['GET'])
+def get_user(user_id):
     """
-    Endpoint for deleting a user by id
+    Endpoint for getting a user by id
     """
     user = User.query.filter_by(id = user_id).first()
     if user is None:
-        return failure_response("User not found", 404)
-    db.session.delete(user)
-    db.session.commit()
+        return failure_response("User not found")
     return success_response(user.serialize(), 201)
 
 @app.route('/api/users/<int:user_id>/', methods=['POST'])
@@ -87,6 +85,18 @@ def update_user(user_id):
     db.session.commit()
 
     return user.serialize(), 200
+
+@app.route("/api/users/<int:user_id>/", methods = ["DELETE"])
+def delete_user(user_id):
+    """
+    Endpoint for deleting a user by id
+    """
+    user = User.query.filter_by(id = user_id).first()
+    if user is None:
+        return failure_response("User not found")
+    db.session.delete(user)
+    db.session.commit()
+    return success_response(user.serialize(), 201)
 
 # PET ROUTES -----------------------------------------
 @app.route("/api/pets/", methods = ["GET"])
