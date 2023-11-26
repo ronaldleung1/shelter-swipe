@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var animalIndex = 0
     
     var body: some View {
+        AuthView()
         
         if animalIndex < animals.count {
             CardView(animalIndex: $animalIndex)
@@ -20,10 +21,8 @@ struct ContentView: View {
             Text("No more cards")
         }
         
+        main
     }
     
 }
 
-#Preview {
-    ContentView()
-}

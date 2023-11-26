@@ -59,6 +59,3 @@ struct SavedView: View {
     
 }
 
-#Preview {
-    SavedView()
-}
