@@ -4,11 +4,11 @@ db = SQLAlchemy()
 
 # Join tables -----------------------------
 
-# user_pet = db.Table(
-#     "user_table", db.Model.metadata,
-#     db.Column("user_id", db.Integer, db.ForeignKey("users.id")),
-#     db.Column("pet_id", db.Integer, db.ForeignKey("pets.id"))
-# )
+user_pet = db.Table(
+    "user_table", db.Model.metadata,
+    db.Column("user_id", db.Integer, db.ForeignKey("users.id")),
+    db.Column("pet_id", db.Integer, db.ForeignKey("pets.id"))
+)
 
 # Classes ---------------------------------
 class User(db.Model):
@@ -20,13 +20,14 @@ class User(db.Model):
     name = db.Column(db.String, nullable = False)
     location = db.Column(db.String, nullable = False)
 
-    # pets = db.relationship("Pet", secondary = user_pet, back_populates="users")
+    liked_pets = db.relationship("Pet", secondary = user_pet, back_populates="users")
 
     def __init__(self, **kwargs):
         """
         Initialize a User object
         """
         self.name = kwargs.get("name", "")
+        self.location = kwargs.get("location", "")
 
     def serialize(self):
         """
@@ -61,7 +62,7 @@ class Pet(db.Model):
     age = db.Column(db.Integer, nullable = False)
     description = db.Column(db.String, nullable = True)
     shelter_id = db.Column(db.Integer, db.ForeignKey("shelters.id"), nullable = False)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable = True)
+    users = db.relationship("User", secondary = user_pet, back_populates="liked_pets")
 
     def __init__(self, **kwargs):
         """
@@ -86,21 +87,22 @@ class Pet(db.Model):
             "age": self.age,
             "description": self.description,
             "shelter": self.shelter_id,
+            "users": [u.simple_serialize() for u in self.users]
         }
     
-    # def simple_serialize(self):
-    #     """
-    #     Serializes a Pet object with only basic information
-    #     """
-    #     return {
-    #         "id": self.id,
-    #         "name": self.name,
-    #         "species": self.species,
-    #         "breed": self.breed,
-    #         "age": self.age,
-    #         "likes": self.likes,
-    #         "shelter": self.shelter_id
-    #     }
+    def simple_serialize(self):
+        """
+        Serializes a Pet object with only basic information
+        """
+        return {
+            "id": self.id,
+            "name": self.name,
+            "species": self.species,
+            "breed": self.breed,
+            "age": self.age,
+            "likes": self.likes,
+            "shelter": self.shelter_id
+        }
 
 class Shelter(db.Model):
     """
