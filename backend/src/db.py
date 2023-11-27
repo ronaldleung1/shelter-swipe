@@ -4,7 +4,13 @@ db = SQLAlchemy()
 
 # Join tables -----------------------------
 
-user_pet = db.Table(
+user_liked_pet = db.Table(
+    "user_table", db.Model.metadata,
+    db.Column("user_id", db.Integer, db.ForeignKey("users.id")),
+    db.Column("pet_id", db.Integer, db.ForeignKey("pets.id"))
+)
+
+user_disliked_pet = db.Table(
     "user_table", db.Model.metadata,
     db.Column("user_id", db.Integer, db.ForeignKey("users.id")),
     db.Column("pet_id", db.Integer, db.ForeignKey("pets.id"))
@@ -20,7 +26,8 @@ class User(db.Model):
     name = db.Column(db.String, nullable = False)
     location = db.Column(db.String, nullable = False)
 
-    liked_pets = db.relationship("Pet", secondary = user_pet, back_populates="users")
+    liked_pets = db.relationship("Pet", secondary = user_liked_pet, back_populates="users_liked")
+    disliked_pets = db.relationship("Pet", secondary = user_disliked_pet, back_populates="users_disliked")
 
     def __init__(self, **kwargs):
         """
@@ -37,7 +44,8 @@ class User(db.Model):
             "id": self.id,
             "name": self.name,
             "location": self.location,
-            "liked_pets": [p.simple_serialize() for p in self.liked_pets]
+            "liked_pets": [p.simple_serialize() for p in self.liked_pets],
+            "disliked_pets": [p.simple_serialize() for p in self.disliked_pets]
         }
     
     def simple_serialize(self):
@@ -60,10 +68,12 @@ class Pet(db.Model):
     species = db.Column(db.String, nullable = False)
     breed = db.Column(db.String, nullable = False)
     age = db.Column(db.Integer, nullable = False)
+    gender = db.Column(db.String, nullable = False)
     description = db.Column(db.String, nullable = True)
     photo_url = db.Column(db.String, nullable = False)
     shelter_id = db.Column(db.Integer, db.ForeignKey("shelters.id"), nullable = False)
-    users = db.relationship("User", secondary = user_pet, back_populates="liked_pets")
+    users_liked = db.relationship("User", secondary = user_liked_pet, back_populates="liked_pets")
+    users_disliked = db.relationship("User", secondary = user_disliked_pet, back_populates="disliked_pets")
 
     def __init__(self, **kwargs):
         """
@@ -92,7 +102,8 @@ class Pet(db.Model):
             "description": self.description,
             "photo": self.photo_url,
             "shelter": self.shelter_id,
-            "users": [u.simple_serialize() for u in self.users]
+            "users_liked": [u.simple_serialize() for u in self.users_liked],
+            "users_disliked": [u.simple_serialize() for u in self.users_disliked]
         }
     
     def simple_serialize(self):
