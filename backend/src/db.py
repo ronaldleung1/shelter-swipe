@@ -73,6 +73,7 @@ class Pet(db.Model):
         self.species = kwargs.get("species", "")
         self.breed = kwargs.get("breed", "")
         self.age = kwargs.get("age", "")
+        self.gender = kwargs.get("gender", "")
         self.description = kwargs.get("description", "")
         self.photo_url = kwargs.get("photo_url", "")
         self.shelter_id = kwargs.get("shelter_id")
@@ -87,6 +88,7 @@ class Pet(db.Model):
             "species": self.species,
             "breed": self.breed,
             "age": self.age,
+            "gender": self.gender,
             "description": self.description,
             "photo": self.photo_url,
             "shelter": self.shelter_id,
@@ -103,6 +105,7 @@ class Pet(db.Model):
             "species": self.species,
             "breed": self.breed,
             "age": self.age,
+            "gender": self.gender,
             "description": self.description,
             "photo": self.photo_url,
             "shelter": self.shelter_id

@@ -62,7 +62,7 @@ def get_user(user_id):
 @app.route('/api/users/<int:user_id>/', methods=['POST'])
 def update_user(user_id):
     """
-    Endpoint for updating a user by id
+    Endpoint for updating a user by id (excludes `liked_pets`)
     """
     body = json.loads(request.data)
     user = User.query.filter_by(id = user_id).first()
@@ -85,6 +85,13 @@ def update_user(user_id):
     db.session.commit()
 
     return user.serialize(), 200
+
+@app.route('/api/users/<int:user_id>/liked-pets', methods=['POST'])
+def like_pet(user_id):
+
+@app.route('/api/users/<int:user_id>/disliked-pets', methods=['POST'])
+def like_pet(user_id):
+
 
 @app.route("/api/users/<int:user_id>/", methods = ["DELETE"])
 def delete_user(user_id):
