@@ -5,13 +5,13 @@ db = SQLAlchemy()
 # Join tables -----------------------------
 
 user_liked_pet = db.Table(
-    "user_table", db.Model.metadata,
+    "user_liked_table", db.Model.metadata,
     db.Column("user_id", db.Integer, db.ForeignKey("users.id")),
     db.Column("pet_id", db.Integer, db.ForeignKey("pets.id"))
 )
 
 user_disliked_pet = db.Table(
-    "user_table", db.Model.metadata,
+    "user_disliked_table", db.Model.metadata,
     db.Column("user_id", db.Integer, db.ForeignKey("users.id")),
     db.Column("pet_id", db.Integer, db.ForeignKey("pets.id"))
 )
@@ -100,8 +100,8 @@ class Pet(db.Model):
             "age": self.age,
             "gender": self.gender,
             "description": self.description,
-            "photo": self.photo_url,
-            "shelter": self.shelter_id,
+            "photo_url": self.photo_url,
+            "shelter_id": self.shelter_id,
             "users_liked": [u.simple_serialize() for u in self.users_liked],
             "users_disliked": [u.simple_serialize() for u in self.users_disliked]
         }
@@ -118,8 +118,8 @@ class Pet(db.Model):
             "age": self.age,
             "gender": self.gender,
             "description": self.description,
-            "photo": self.photo_url,
-            "shelter": self.shelter_id
+            "photo_url": self.photo_url,
+            "shelter_id": self.shelter_id
         }
 
 class Shelter(db.Model):
