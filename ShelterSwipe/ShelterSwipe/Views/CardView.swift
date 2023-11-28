@@ -24,13 +24,24 @@ struct CardView: View {
                 animalDescription(animal)
                 Spacer()
             }
-            .onChange(of: animalIndex) {
-                // Reset offset and color when animalIndex changes
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    offset = .zero
-                    color = .clear
-                }
-            }
+            // iOS 17
+//            .onChange(of: animalIndex) {
+//                // Reset offset and color when animalIndex changes
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                    offset = .zero
+//                    color = .clear
+//                }
+//            }
+            
+//            // iOS 16
+//            .onChange(of: animalIndex) { newValue in
+//                // Reset offset and color when animalIndex changes
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                    offset = .zero
+//                    color = .clear
+//                }
+//            }
+
         } else {
             Text("No more cards")
         }
