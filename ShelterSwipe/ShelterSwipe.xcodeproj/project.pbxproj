@@ -13,6 +13,8 @@
 		36237D4A2B14053100EF6A1A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36237D492B14053100EF6A1A /* AuthView.swift */; };
 		58980103B6F878FA21D19F34 /* Pods_ShelterSwipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD06CC0884AB7478C73E631 /* Pods_ShelterSwipe.framework */; };
 		C333255D2B103EA4000BE3D3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333255C2B103EA4000BE3D3 /* CardView.swift */; };
+		C36E0B382B167FD40079689C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36E0B372B167FD40079689C /* NetworkManager.swift */; };
+		C36E0B3C2B1697E10079689C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36E0B3B2B1697E10079689C /* Color.swift */; };
 		C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03CF2B099F620097B4AF /* ShelterSwipeApp.swift */; };
 		C37C03D22B099F620097B4AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03D12B099F620097B4AF /* ContentView.swift */; };
 		C37C03D42B099F6D0097B4AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37C03D32B099F6D0097B4AF /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		36237D492B14053100EF6A1A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		8CD06CC0884AB7478C73E631 /* Pods_ShelterSwipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShelterSwipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C333255C2B103EA4000BE3D3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C36E0B372B167FD40079689C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C36E0B3B2B1697E10079689C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		C37C03CC2B099F620097B4AF /* ShelterSwipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShelterSwipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37C03CF2B099F620097B4AF /* ShelterSwipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeApp.swift; sourceTree = "<group>"; };
 		C37C03D12B099F620097B4AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		C37C03FC2B09A2100097B4AF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C36E0B372B167FD40079689C /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				36237D452B1402BE00EF6A1A /* String.swift */,
+				C36E0B3B2B1697E10079689C /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -380,6 +386,8 @@
 			files = (
 				36237D4A2B14053100EF6A1A /* AuthView.swift in Sources */,
 				36237D482B14044D00EF6A1A /* SignupView.swift in Sources */,
+				C36E0B3C2B1697E10079689C /* Color.swift in Sources */,
+				C36E0B382B167FD40079689C /* NetworkManager.swift in Sources */,
 				C37C03D22B099F620097B4AF /* ContentView.swift in Sources */,
 				C3D6CEF52B0AA1EE00C266FF /* Animal.swift in Sources */,
 				C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */,
@@ -551,7 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShelterSwipe/Preview Content\"";
-				DEVELOPMENT_TEAM = 37RDYDUAJ7;
+				DEVELOPMENT_TEAM = TZ69AG86Z2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -565,7 +573,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cassidy.ShelterSwipe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassidy.ShelterSwipe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -582,7 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShelterSwipe/Preview Content\"";
-				DEVELOPMENT_TEAM = 37RDYDUAJ7;
+				DEVELOPMENT_TEAM = TZ69AG86Z2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -596,7 +604,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cassidy.ShelterSwipe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cassidy.ShelterSwipe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

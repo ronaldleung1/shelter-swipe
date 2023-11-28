@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
-
+    
     @State private var offset = CGSize.zero
     @State private var color = Color.clear
     @Binding var animalIndex: Int
@@ -17,7 +17,6 @@ struct CardView: View {
     var body: some View {
         if animalIndex < animals.count && animalIndex >= 0 {
             let animal = animals[animalIndex]
-       
             
             VStack{
                 animalCard(animal)
@@ -26,37 +25,38 @@ struct CardView: View {
                 Spacer()
             }
             // iOS 17
-//            .onChange(of: animalIndex) {
-//                // Reset offset and color when animalIndex changes
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                    offset = .zero
-//                    color = .clear
-//                }
-//            }
+            //            .onChange(of: animalIndex) {
+            //                // Reset offset and color when animalIndex changes
+            //                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            //                    offset = .zero
+            //                    color = .clear
+            //                }
+            //            }
             
-//            // iOS 16
-//            .onChange(of: animalIndex) { newValue in
-//                // Reset offset and color when animalIndex changes
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                    offset = .zero
-//                    color = .clear
-//                }
-//            }
-
+            //            // iOS 16
+            .onChange(of: animalIndex) { newValue in
+                // Reset offset and color when animalIndex changes
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    offset = .zero
+                    color = .clear
+                }
+            }
+            
         } else {
             Text("No more cards")
         }
+
         
     }
     
     private func swipeCard(width: CGFloat) {
         switch width {
         case -500...(-150):
-//            print("disliked")
+            //            print("disliked")
             offset = CGSize(width: -500, height: 0)
             animalIndex += 1
         case 150...500:
-//            print("liked")
+            //            print("liked")
             offset = CGSize(width: 500, height: 0)
             animalIndex += 1
         default:
@@ -131,7 +131,7 @@ struct CardView: View {
             Text("Breed: \(animal.breed)")
         }
     }
-
+    
 }
 
 #Preview {
