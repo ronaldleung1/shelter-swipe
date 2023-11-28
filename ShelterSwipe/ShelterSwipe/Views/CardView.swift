@@ -18,6 +18,7 @@ struct CardView: View {
         if animalIndex < animals.count && animalIndex >= 0 {
             let animal = animals[animalIndex]
        
+            
             VStack{
                 animalCard(animal)
                 Spacer()
