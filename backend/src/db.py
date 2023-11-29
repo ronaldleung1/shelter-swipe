@@ -45,7 +45,7 @@ class User(db.Model):
             "name": self.name,
             "location": self.location,
             "liked_pets": [p.simple_serialize() for p in self.liked_pets],
-            "disliked_pets": [p.simple_serialize() for p in self.disliked_pets]
+            "disliked_pets": [p.simple_serialize() for p in self.disliked
         }
     
     def simple_serialize(self):
@@ -103,7 +103,6 @@ class Pet(db.Model):
             "photo_url": self.photo_url,
             "shelter_id": self.shelter_id,
             "users_liked": [u.simple_serialize() for u in self.users_liked],
-            "users_disliked": [u.simple_serialize() for u in self.users_disliked]
         }
     
     def simple_serialize(self):

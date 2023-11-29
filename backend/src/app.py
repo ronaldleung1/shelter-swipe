@@ -93,6 +93,7 @@ def like_pet(user_id):
 
     liked_pet_ids = body.get('liked_pets', [])
     liked_pet_ids.append(new_pet_id)
+
     liked_pets = []
     for pet_id in liked_pet_ids:
         pet = Pet.query.filter_by(id=pet_id).first()
@@ -131,7 +132,6 @@ def dislike_pet(user_id):
     user.disliked_pets = disliked_pets
     db.session.commit()
     return user.serialize(), 200
-
 
 @app.route("/api/users/<int:user_id>/", methods = ["DELETE"])
 def delete_user(user_id):
