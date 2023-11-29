@@ -16,16 +16,9 @@ struct ContentView: View {
     var body: some View {
         //        AuthView()
         
-//        if animalIndex < animals.count {
-//            CardView(animalIndex: $animalIndex)
-////                .onAppear {
-////                    fetchAnimals()
-////                }
-//        } else {
-//            Text("No more cards")
-//        }
+        mainView
         
-        SavedView()
+//        SavedView()
         
     }
     
@@ -36,6 +29,22 @@ struct ContentView: View {
 //            }
 //        }
 //    }
+    
+    private var mainView: some View {
+        ZStack {
+            Color.purple2.edgesIgnoringSafeArea(.all)
+            
+            if animalIndex < animals.count {
+                CardView(animalIndex: $animalIndex)
+                    
+            } else {
+                Text("No more cards")
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+            }
+        }
+        .preferredColorScheme(.light)
+    }
     
 }
 

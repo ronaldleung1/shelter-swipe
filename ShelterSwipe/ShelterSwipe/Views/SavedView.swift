@@ -32,12 +32,18 @@ struct SavedView: View {
 //    }
     
     private var scrollContent: some View {
-//        List (animals, id: \.self) { animal in
-//            VStack(spacing: 20) {
-//                animalCell(animal)
+//        NavigationView {
+//            List (animals, id: \.self) { animal in
+//                VStack(spacing: 20) {
+//                    animalCell(animal)
+//                }
+//                .padding(.horizontal, 24)
 //            }
-//            .padding(.horizontal, 24)
+//            .onAppear {
+//                fetchAnimals()
+//            }
 //        }
+        
 //        .onAppear {
 //            fetchAnimals()
 //        }

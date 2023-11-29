@@ -11,7 +11,7 @@ import Alamofire
 class NetworkManager {
     
     static let shared = NetworkManager()
-    private let endpoint: String = ""
+    private let endpoint: String = "https://c28a-128-84-127-144.ngrok-free.app"
     let decoder = JSONDecoder()
 //    decoder.keyDecodingStrategy = .convertFromSnakeCase
 
@@ -21,7 +21,7 @@ class NetworkManager {
     
     func fetchAnimals(completion: @escaping ([Animal]) -> Void) {
         
-        AF.request(endpoint, method: .get)
+        AF.request(endpoint + "/api/pets/", method: .get)
             .validate()
             .responseDecodable(of: [Animal].self, decoder: decoder) { response in
                 switch response.result {

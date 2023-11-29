@@ -24,6 +24,7 @@ struct CardView: View {
                 animalDescription(animal)
                 Spacer()
             }
+            .fontWeight(.medium)
             // iOS 17
             //            .onChange(of: animalIndex) {
             //                // Reset offset and color when animalIndex changes
@@ -44,6 +45,8 @@ struct CardView: View {
             
         } else {
             Text("No more cards")
+                .fontWeight(.bold)
+                .foregroundStyle(.white)
         }
 
         
@@ -81,10 +84,14 @@ struct CardView: View {
             Text(animal.name)
                 .font(.title)
                 .padding(.bottom, 20)
+                .foregroundColor(.white)
         }
-        .background(.white)
-        .border(.white, width: 5)
+        .background(Color.purple1)
         .cornerRadius(20)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.purple1, lineWidth: 5)
+        )
         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
         
         .offset(x: offset.width, y: offset.height * 0.4)
