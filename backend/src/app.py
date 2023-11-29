@@ -62,7 +62,7 @@ def get_user(user_id):
 @app.route('/api/users/<int:user_id>/', methods=['POST'])
 def update_user(user_id):
     """
-    Endpoint for updating a user by id
+    Endpoint for updating a user by id (excludes `liked_pets`)
     """
     body = json.loads(request.data)
     user = User.query.filter_by(id = user_id).first()
@@ -71,9 +71,29 @@ def update_user(user_id):
     
     user.name = body.get("name", user.name)
     user.location = body.get("location", user.location)
-    user.liked_pets = body.get("liked_pets", user.liked_pets)
     
+    db.session.commit()
+
+    return user.serialize(), 200
+
+@app.route('/api/users/<int:user_id>/liked-pets/', methods=['POST'])
+def like_pet(user_id):
+    """
+    Endpoint for liking a pet by id
+    """
+    body = json.loads(request.data)
+    user = User.query.filter_by(id = user_id).first()
+    if user is None:
+        return failure_response("User not found")
+
+    if body.get("pet_id") is None:
+        return failure_response("Missing information to like a pet", 400)
+    
+    new_pet_id = body.get("pet_id")
+
     liked_pet_ids = body.get('liked_pets', [])
+    liked_pet_ids.append(new_pet_id)
+
     liked_pets = []
     for pet_id in liked_pet_ids:
         pet = Pet.query.filter_by(id=pet_id).first()
@@ -83,7 +103,34 @@ def update_user(user_id):
 
     user.liked_pets = liked_pets
     db.session.commit()
+    return user.serialize(), 200
 
+@app.route('/api/users/<int:user_id>/disliked-pets/', methods=['POST'])
+def dislike_pet(user_id):
+    """
+    Endpoint for disliking a pet by id
+    """
+    body = json.loads(request.data)
+    user = User.query.filter_by(id = user_id).first()
+    if user is None:
+        return failure_response("User not found")
+
+    if body.get("pet_id") is None:
+        return failure_response("Missing information to dislike a pet", 400)
+    
+    new_pet_id = body.get("pet_id")
+
+    disliked_pet_ids = body.get('disliked_pets', [])
+    disliked_pet_ids.append(new_pet_id)
+    disliked_pets = []
+    for pet_id in disliked_pet_ids:
+        pet = Pet.query.filter_by(id=pet_id).first()
+        if pet is None:
+            return failure_response("Pet not found")
+        disliked_pets.append(pet)
+
+    user.disliked_pets = disliked_pets
+    db.session.commit()
     return user.serialize(), 200
 
 @app.route("/api/users/<int:user_id>/", methods = ["DELETE"])
@@ -114,14 +161,16 @@ def create_pet():
     Endpoint for creating a pet
     """
     body = json.loads(request.data)
-    if body.get("name") is None or body.get("species") is None or body.get("breed") is None or body.get("age") is None:
+    if body.get("name") is None or body.get("species") is None or body.get("breed") is None or body.get("age") is None or body.get("gender") is None or body.get("photo_url") is None or body.get("shelter_id") is None:
         return failure_response("Missing information to create a new pet", 400)
     new_pet = Pet(
         name = body.get("name"),
         species = body.get("species"),
         breed = body.get("breed"),
         age = body.get("age"),
+        gender = body.get("gender"),
         description = body.get("description"),
+        photo_url = body.get("photo_url"),
         shelter_id = body.get("shelter_id")
     )
     db.session.add(new_pet)
