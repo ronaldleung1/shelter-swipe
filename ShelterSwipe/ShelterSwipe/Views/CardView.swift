@@ -12,7 +12,8 @@ struct CardView: View {
     @State private var offset = CGSize.zero
     @State private var color = Color.clear
     @Binding var animalIndex: Int
-    private let animals = Animal.dummyData
+    @Binding var animals: [Animal]
+//    private let animals = Animal.dummyData
     
     var body: some View {
         if animalIndex < animals.count && animalIndex >= 0 {
@@ -141,6 +142,6 @@ struct CardView: View {
     
 }
 
-#Preview {
-    CardView(animalIndex: Binding.constant(0))
-}
+//#Preview {
+//    CardView(animalIndex: Binding.constant(0), animals: <#Binding<[Animal]>#>)
+//}
