@@ -21,7 +21,6 @@ struct ContentView: View {
             Text("No more cards")
         }
         
-        main
     }
     
 }
