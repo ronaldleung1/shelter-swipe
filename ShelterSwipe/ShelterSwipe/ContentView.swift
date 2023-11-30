@@ -14,9 +14,9 @@ struct ContentView: View {
     @State var animalIndex = 0
     
     var body: some View {
-        //        AuthView()
+        //AuthView()
         
-//        mainView
+        //mainView
         
         SavedView()
         
@@ -51,6 +51,6 @@ struct ContentView: View {
     
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

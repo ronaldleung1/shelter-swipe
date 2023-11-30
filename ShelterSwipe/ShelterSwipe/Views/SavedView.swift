@@ -13,11 +13,10 @@ struct SavedView: View {
     @State private var animals: [Animal] = []
     
     var body: some View {
-        ScrollView {
-            scrollContent
-        }
-        .preferredColorScheme(.light)
-        .background(Color.purple2)
+        
+        scrollContent
+            //.preferredColorScheme(.light)
+            //.background(Color.black)
     }
     
     private func fetchAnimals() {
@@ -30,15 +29,19 @@ struct SavedView: View {
     
     private var scrollContent: some View {
         NavigationView {
-            List (animals, id: \.self) { animal in
-                VStack(spacing: 20) {
-                    animalCell(animal)
-                }
-                .padding(.horizontal, 24)
+            List (animals, id: \.self) { animal in                    ScrollView{
+                        Spacer()
+                        animalCell(animal)
+                    }
+                    .listRowBackground(Color.purple2)
             }
             .onAppear {
                 fetchAnimals()
             }
+            .navigationTitle("Saved")
+            .background(Color.purple2)
+            .scrollContentBackground(.hidden)
+
         }
 
         
