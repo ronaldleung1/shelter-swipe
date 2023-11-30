@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  demo:
+    image: "qiandrewj/shelter-swipe"
+    ports:
+      - "80:8000"
