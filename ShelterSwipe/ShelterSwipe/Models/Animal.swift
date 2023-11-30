@@ -14,7 +14,7 @@ struct Animal: Hashable, Codable {
     let breed: String
     let age: Int
     let gender: String
-    let description: String
+    let description: String?
     let photo_url: String?
     let shelter_id: String?
     let users_liked: [String]?

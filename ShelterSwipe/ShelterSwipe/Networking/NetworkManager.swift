@@ -11,7 +11,7 @@ import Alamofire
 class NetworkManager {
     
     static let shared = NetworkManager()
-    private let endpoint: String = "https://d8d5-128-84-127-144.ngrok-free.app/"
+    private let endpoint: String = "https://f20d-128-84-127-144.ngrok-free.app/"
     let decoder = JSONDecoder()
     
     private init() {
@@ -28,6 +28,7 @@ class NetworkManager {
                 case .success(let animalResponse):
                     let animals = animalResponse.pets
                     print("Successfully fetched \(animals.count) animals")
+                    print(animals)
                     completion(animals)
                 case .failure(let error):
                     print("Error in NetworkManager.fetchAnimals: \(error)")

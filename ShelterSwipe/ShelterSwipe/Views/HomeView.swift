@@ -13,7 +13,10 @@ struct HomeView: View {
     @State var animalIndex = 0
     
     var body: some View {
-        mainView
+        NavigationView{
+            mainView
+                .navigationTitle("Home")
+        }
     }
     
     private func fetchAnimals() {
