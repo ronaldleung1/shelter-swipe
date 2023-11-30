@@ -13,23 +13,24 @@ class NetworkManager {
     static let shared = NetworkManager()
     private let endpoint: String = "https://c28a-128-84-127-144.ngrok-free.app"
     let decoder = JSONDecoder()
-//    decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-    private init() { 
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+    
+    private init() {
     }
     
     func fetchAnimals(completion: @escaping ([Animal]) -> Void) {
         
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
         AF.request(endpoint + "/api/pets/", method: .get)
             .validate()
-            .responseDecodable(of: [Animal].self, decoder: decoder) { response in
+            .responseDecodable(of: AnimalResponse.self, decoder: decoder) { response in
                 switch response.result {
-                case .success(let animals):
+                case .success(let animalResponse):
+                    let animals = animalResponse.pets
                     print("Successfully fetched \(animals.count) animals")
                     completion(animals)
                 case .failure(let error):
-                    print("Error in NetworkManager.fetchAnimals: \(error.localizedDescription)")
+                    print("Error in NetworkManager.fetchAnimals: \(error)")
                 }
             }
     }

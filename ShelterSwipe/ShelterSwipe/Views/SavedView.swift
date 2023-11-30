@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SavedView: View {
     
-    private let animals: [Animal] = Animal.dummyData
-//    @State private var animals: [Animal] = []
+//    private let animals: [Animal] = Animal.dummyData
+    @State private var animals: [Animal] = []
     
     var body: some View {
         ScrollView {
@@ -18,48 +18,43 @@ struct SavedView: View {
         }
         .preferredColorScheme(.light)
         .background(Color.purple2)
-//        .onAppear {
-//            fetchAnimals()
-//        }
     }
     
-//    private func fetchAnimals() {
-//        NetworkManager.shared.fetchAnimals{ animals in
-//            DispatchQueue.main.async {
-//                self.animals = animals
-//            }
-//        }
-//    }
+    private func fetchAnimals() {
+        NetworkManager.shared.fetchAnimals{ animals in
+            DispatchQueue.main.async {
+                self.animals = animals
+            }
+        }
+    }
     
     private var scrollContent: some View {
-//        NavigationView {
-//            List (animals, id: \.self) { animal in
-//                VStack(spacing: 20) {
-//                    animalCell(animal)
-//                }
-//                .padding(.horizontal, 24)
-//            }
-//            .onAppear {
-//                fetchAnimals()
-//            }
-//        }
-        
-//        .onAppear {
-//            fetchAnimals()
-//        }
-        
-        VStack(spacing: 20) {
-            ForEach(animals, id: \.self) { animal in
-                animalCell(animal)
+        NavigationView {
+            List (animals, id: \.self) { animal in
+                VStack(spacing: 20) {
+                    animalCell(animal)
+                }
+                .padding(.horizontal, 24)
             }
-
+            .onAppear {
+                fetchAnimals()
+            }
         }
-        .padding(.horizontal, 24)
+
+        
+//        VStack(spacing: 20) {
+//            ForEach(animals, id: \.self) { animal in
+//                animalCell(animal)
+//            }
+//
+//        }
+//        .padding(.horizontal, 24)
     }
     
     private func animalCell(_ animal: Animal) -> some View {
         HStack {
             animalImage(url: URL(string: "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"))
+//            animalImage(url: URL(string: animal.photo_url ?? ""))
             
             VStack(alignment: .leading) {
                 Text("Name: \(animal.name)")
