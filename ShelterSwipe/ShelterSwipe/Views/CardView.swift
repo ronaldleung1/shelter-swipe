@@ -111,7 +111,7 @@ struct CardView: View {
                     }
                 }
         )
-        .padding(.top, 100)
+        .padding(.top, 50)
     }
     
     private var animalImage: some View {
