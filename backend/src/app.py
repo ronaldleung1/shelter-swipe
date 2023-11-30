@@ -22,6 +22,12 @@ def success_response(data, code=200):
 def failure_response(message, code=404):
     return json.dumps({"error": message}), code
 
+@app.route("/")
+def test():
+    """
+    Default endpoint
+    """
+    return "Hello, this is a test"
 # USER ROUTES -----------------------------------------
 @app.route("/api/users/", methods = ["GET"])
 def get_users():
