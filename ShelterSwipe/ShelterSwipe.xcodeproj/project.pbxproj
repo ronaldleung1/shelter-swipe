@@ -24,6 +24,8 @@
 		C37C03EB2B099F6F0097B4AF /* ShelterSwipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */; };
 		C37C03ED2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */; };
 		C37C03FA2B09A1E60097B4AF /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C03F92B09A1E60097B4AF /* SavedView.swift */; };
+		C3CF61892B1829C8009F5B02 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF61882B1829C8009F5B02 /* NavbarView.swift */; };
+		C3CF618B2B183B39009F5B02 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF618A2B183B39009F5B02 /* HomeView.swift */; };
 		C3D6CEF52B0AA1EE00C266FF /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6CEF42B0AA1EE00C266FF /* Animal.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		C37C03EA2B099F6F0097B4AF /* ShelterSwipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeUITests.swift; sourceTree = "<group>"; };
 		C37C03EC2B099F6F0097B4AF /* ShelterSwipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterSwipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C37C03F92B09A1E60097B4AF /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		C3CF61882B1829C8009F5B02 /* NavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
+		C3CF618A2B183B39009F5B02 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C3D6CEF42B0AA1EE00C266FF /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		CC16CC3C3890DF5BD09061E6 /* Pods-ShelterSwipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelterSwipe.debug.xcconfig"; path = "Target Support Files/Pods-ShelterSwipe/Pods-ShelterSwipe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +178,8 @@
 				36237D472B14044D00EF6A1A /* SignupView.swift */,
 				36237D492B14053100EF6A1A /* AuthView.swift */,
 				C333255C2B103EA4000BE3D3 /* CardView.swift */,
+				C3CF61882B1829C8009F5B02 /* NavbarView.swift */,
+				C3CF618A2B183B39009F5B02 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,7 +394,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3565E7E2B16FCAE0069CC50 /* AnimalResponse.swift in Sources */,
+				C3CF618B2B183B39009F5B02 /* HomeView.swift in Sources */,
 				36237D4A2B14053100EF6A1A /* AuthView.swift in Sources */,
+				C3CF61892B1829C8009F5B02 /* NavbarView.swift in Sources */,
 				36237D482B14044D00EF6A1A /* SignupView.swift in Sources */,
 				C36E0B3C2B1697E10079689C /* Color.swift in Sources */,
 				C36E0B382B167FD40079689C /* NetworkManager.swift in Sources */,

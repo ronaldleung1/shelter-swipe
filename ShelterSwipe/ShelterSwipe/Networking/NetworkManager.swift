@@ -21,7 +21,7 @@ class NetworkManager {
         
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-        AF.request(endpoint + "/api/pets/", method: .get)
+        AF.request(endpoint + "api/pets/", method: .get)
             .validate()
             .responseDecodable(of: AnimalResponse.self, decoder: decoder) { response in
                 switch response.result {
