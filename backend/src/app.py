@@ -45,10 +45,11 @@ def create_user():
     Endpoint for creating a user
     """
     body = json.loads(request.data)
-    if body.get("name") is None:
+    if body.get("name") is None or body.get("email") is None or body.get("location") is None:
         return failure_response("Missing information to create a new user", 400)
     new_user = User(
         name = body.get("name"),
+        email = body.get("email"),
         location = body.get("location")
     )
     db.session.add(new_user)
@@ -76,6 +77,7 @@ def update_user(user_id):
         return failure_response("User not found")
     
     user.name = body.get("name", user.name)
+    user.email = body.get("email", user.email)
     user.location = body.get("location", user.location)
     
     db.session.commit()

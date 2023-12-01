@@ -24,6 +24,7 @@ class User(db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key = True, autoincrement = True)
     name = db.Column(db.String, nullable = False)
+    email = db.Column(db.String, nullable = False)
     location = db.Column(db.String, nullable = False)
 
     liked_pets = db.relationship("Pet", secondary = user_liked_pet, back_populates="users_liked")
@@ -34,6 +35,7 @@ class User(db.Model):
         Initialize a User object
         """
         self.name = kwargs.get("name", "")
+        self.email = kwargs.get("email", "")
         self.location = kwargs.get("location", "")
 
     def serialize(self):
@@ -43,6 +45,7 @@ class User(db.Model):
         return {
             "id": self.id,
             "name": self.name,
+            "email": self.email,
             "location": self.location,
             "liked_pets": [p.simple_serialize() for p in self.liked_pets],
             "disliked_pets": [p.simple_serialize() for p in self.disliked_pets]
@@ -55,6 +58,7 @@ class User(db.Model):
         return {
             "id": self.id,
             "name": self.name,
+            "email": self.email,
             "location": self.location
         }
 
