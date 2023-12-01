@@ -109,7 +109,8 @@ def like_pet(user_id):
             return failure_response("Pet not found")
         liked_pets.append(pet)
 
-    user.liked_pets = liked_pets
+    user.liked_pets.extend(liked_pets)
+    
     db.session.commit()
     return user.serialize(), 200
 
@@ -119,17 +120,18 @@ def dislike_pet(user_id):
     Endpoint for disliking a pet by id
     """
     body = json.loads(request.data)
-    user = User.query.filter_by(id = user_id).first()
+    user = User.query.filter_by(id=user_id).first()
     if user is None:
         return failure_response("User not found")
 
     if body.get("pet_id") is None:
         return failure_response("Missing information to dislike a pet", 400)
-    
+
     new_pet_id = body.get("pet_id")
 
     disliked_pet_ids = body.get('disliked_pets', [])
     disliked_pet_ids.append(new_pet_id)
+
     disliked_pets = []
     for pet_id in disliked_pet_ids:
         pet = Pet.query.filter_by(id=pet_id).first()
@@ -137,7 +139,8 @@ def dislike_pet(user_id):
             return failure_response("Pet not found")
         disliked_pets.append(pet)
 
-    user.disliked_pets = disliked_pets
+    user.disliked_pets.extend(disliked_pets)
+
     db.session.commit()
     return user.serialize(), 200
 
