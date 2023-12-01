@@ -14,11 +14,11 @@ struct Animal: Hashable, Codable {
     let breed: String
     let age: Int
     let gender: String
-    let description: String
-    let photo_url: String?
-    let shelter_id: String?
-    let users_liked: [String]?
-    let users_disliked: [String]?
+    let description: String?
+    let photoUrl: String?
+    let shelterId: Int
+    let usersLiked: [User]?
+    let usersDisliked: [User]?
 }
 
 //extension Animal {

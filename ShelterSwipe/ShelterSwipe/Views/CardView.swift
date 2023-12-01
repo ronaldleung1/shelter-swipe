@@ -81,12 +81,13 @@ struct CardView: View {
     
     private func animalCard(_ animal: Animal) -> some View {
         VStack{
-            animalImage
+            animalImage(animal)
             Text(animal.name)
                 .font(.title)
                 .padding(.bottom, 20)
                 .foregroundColor(.white)
         }
+        .overlay(color.opacity(0.5))
         .background(Color.purple1)
         .cornerRadius(20)
         .overlay(
@@ -114,9 +115,10 @@ struct CardView: View {
         .padding(.top, 50)
     }
     
-    private var animalImage: some View {
-        AsyncImage(
-            url: URL(string: "https://www.thesprucepets.com/thmb/hxWjs7evF2hP1Fb1c1HAvRi_Rw0=/2765x0/filters:no_upscale():strip_icc()/chinese-dog-breeds-4797219-hero-2a1e9c5ed2c54d00aef75b05c5db399c.jpg"),
+    private func animalImage(_ animal: Animal) -> some View {
+        let imageUrl = URL(string: animal.photoUrl ?? "")
+        return AsyncImage(
+            url: imageUrl,
             content: { image in
                 image
                     .resizable()
@@ -137,6 +139,8 @@ struct CardView: View {
             Text("Name: \(animal.name)")
             Text("Species: \(animal.species)")
             Text("Breed: \(animal.breed)")
+            let description = animal.description ?? ""
+            Text("Description: \(description)")
         }
     }
     
