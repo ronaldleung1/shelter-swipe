@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ShelterSwipeApp: App {
+   @StateObject var userAuth: UserAuthModel =  UserAuthModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userAuth)
         }
     }
 }
