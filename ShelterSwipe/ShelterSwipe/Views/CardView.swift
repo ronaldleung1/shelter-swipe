@@ -86,6 +86,7 @@ struct CardView: View {
                 .font(.title)
                 .padding(.bottom, 20)
                 .foregroundColor(.white)
+            
         }
         .overlay(color.opacity(0.5))
         .background(Color.purple1)
@@ -136,10 +137,11 @@ struct CardView: View {
     
     private func animalDescription(_ animal: Animal) -> some View {
         VStack(alignment: .leading) {
-            Text("Name: \(animal.name)")
+//            Text("Name: \(animal.name)")
             Text("Species: \(animal.species)")
             Text("Breed: \(animal.breed)")
             Text("Age: \(String(animal.age)) years old")
+            Text("Gender: \(animal.gender)")
             if let description = animal.description {
                 Text("Description: \(description)")
             }
