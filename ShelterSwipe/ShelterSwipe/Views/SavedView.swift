@@ -9,51 +9,25 @@ import SwiftUI
 
 struct SavedView: View {
     
-    //    private let animals: [Animal] = Animal.dummyData
-//    @State private var animals: [Animal] = []
-    @State private var animals: [Animal] = []
+    @EnvironmentObject var user: User
     
     var body: some View {
-        
         scrollContent
-
-
-    }
-    
-//    private func getUser(){
-//        NetworkManager.shared.getUser{ user in
-//            DispatchQueue.main.async {
-//                self.user = user
-//            }
-//        }
-//    }
-    
-    private func fetchAnimals() {
-        NetworkManager.shared.fetchAnimals{ likedAnimals in
-            DispatchQueue.main.async {
-                self.animals = animals
-            }
-        }
     }
     
     private var scrollContent: some View {
         NavigationView {
-            List (animals, id: \.self) { animal in
+            List (user.likedPets ?? [], id: \.self) { animal in
                 ScrollView{
                     Spacer()
                     animalCell(animal)
                 }
                 .listRowBackground(Color.purple2)
             }
-            .onAppear {
-                fetchAnimals()
-            }
             .navigationTitle("Saved")
             .background(Color.purple2)
             .scrollContentBackground(.hidden)
-            
         }
-        
     }
     
     private func animalCell(_ animal: Animal) -> some View {

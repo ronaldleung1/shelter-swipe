@@ -51,8 +51,7 @@ class NetworkManager {
 //    }
     
     func getUser(completion: @escaping (User) -> Void) {
-        AF.request(endpoint + "api/users/3", method: .get)
-            .validate()
+        AF.request(endpoint + "api/users/2", method: .get)
             .responseDecodable(of: User.self, decoder: decoder) {  response in
                 switch response.result  {
                 case .success(let user):
