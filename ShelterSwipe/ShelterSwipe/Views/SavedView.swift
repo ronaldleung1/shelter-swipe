@@ -15,8 +15,7 @@ struct SavedView: View {
     var body: some View {
         
         scrollContent
-        //.preferredColorScheme(.light)
-        //.background(Color.black)
+
     }
     
     private func fetchAnimals() {
@@ -45,24 +44,14 @@ struct SavedView: View {
             
         }
         
-        
-        //        VStack(spacing: 20) {
-        //            ForEach(animals, id: \.self) { animal in
-        //                animalCell(animal)
-        //            }
-        //
-        //        }
-        //        .padding(.horizontal, 24)
     }
     
     private func animalCell(_ animal: Animal) -> some View {
         HStack {
-                        animalImage(url: URL(string: "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"))
-//            let imageurl = URL(string: animal.photo_url ?? "")
-//            animalImage(url: imageurl)
+            let imageUrl = URL(string: animal.photoUrl ?? "")
+            animalImage(url: imageUrl)
             
             VStack(alignment: .leading) {
-                //                Text("URL: \(animal.photo_url ?? "NIL")")
                 Text("Name: \(animal.name)")
                 Text("Species: \(animal.species)")
                 Text("Breed: \(animal.breed)")
