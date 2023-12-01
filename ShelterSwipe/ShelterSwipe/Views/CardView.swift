@@ -114,7 +114,7 @@ struct CardView: View {
                     }
                 }
         )
-        .padding(.top, 50)
+        .padding(.top, 30)
     }
     
     private func animalImage(_ animal: Animal) -> some View {
