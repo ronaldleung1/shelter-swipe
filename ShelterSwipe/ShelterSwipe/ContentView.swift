@@ -8,23 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var vm: UserAuthModel
+    
+    fileprivate func SignOutButton() -> Button<Text> {
+            Button(action: {
+                vm.signOut()
+            }) {
+                Text("Sign Out")
+            }
+        }
     
     @EnvironmentObject var user: User
         
     var body: some View {
-            
-        //        AuthView()
-
-//        SavedView()
-        
-        NavbarView()
-        
-//        HomeView()
-            
-        
+        VStack{
+            if(vm.isLoggedIn){
+                SavedView()
+                SignOutButton()
+            }else{
+                GoogleSignInView()
+            }
+        }.navigationTitle("Login")
     }
-    
 }
+    
+    
+//    var body: some View {
+//
+//                //AuthView()
+//
+//        //SavedView()
+//
+//        //NavbarView()
+//
+//        //HomeView()
+//
+//        GoogleSignInView()
+//            .preferredColorScheme(.dark)
+//
+//    }
+//
 
 //#Preview {
 //    ContentView()

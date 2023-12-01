@@ -7,6 +7,9 @@ target 'ShelterSwipe' do
 
   # Pods for ShelterSwipe
   pod 'Alamofire'
+  
+  # Pods for GoogleSignIn
+  pod 'GoogleSignIn'
 
 end
 
