@@ -10,16 +10,26 @@ import SwiftUI
 struct SavedView: View {
     
     //    private let animals: [Animal] = Animal.dummyData
+//    @State private var animals: [Animal] = []
     @State private var animals: [Animal] = []
     
     var body: some View {
         
         scrollContent
 
+
     }
     
+//    private func getUser(){
+//        NetworkManager.shared.getUser{ user in
+//            DispatchQueue.main.async {
+//                self.user = user
+//            }
+//        }
+//    }
+    
     private func fetchAnimals() {
-        NetworkManager.shared.fetchAnimals{ animals in
+        NetworkManager.shared.fetchAnimals{ likedAnimals in
             DispatchQueue.main.async {
                 self.animals = animals
             }

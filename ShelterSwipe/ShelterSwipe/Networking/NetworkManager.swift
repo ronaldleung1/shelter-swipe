@@ -11,15 +11,15 @@ import Alamofire
 class NetworkManager {
     
     static let shared = NetworkManager()
-    private let endpoint: String = "https://f20d-128-84-127-144.ngrok-free.app/"
+//    private let endpoint: String = "https://f20d-128-84-127-144.ngrok-free.app/"
+    private let endpoint: String = "http://35.245.102.69/"
     let decoder = JSONDecoder()
     
     private init() {
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
     func fetchAnimals(completion: @escaping ([Animal]) -> Void) {
-        
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         AF.request(endpoint + "api/pets/", method: .get)
             .validate()
@@ -28,12 +28,41 @@ class NetworkManager {
                 case .success(let animalResponse):
                     let animals = animalResponse.pets
                     print("Successfully fetched \(animals.count) animals")
-                    print(animals)
                     completion(animals)
                 case .failure(let error):
                     print("Error in NetworkManager.fetchAnimals: \(error)")
                 }
             }
     }
+    
+//    func fetchLikedAnimals(completion: @escaping ([Animal]) -> Void) {
+//        
+//        AF.request(endpoint + "api/users/3/liked-pets/", method: .get)
+//            .responseDecodable(of: AnimalResponse.self, decoder: decoder) { response in
+//                switch response.result {
+//                case .success(let animalResponse):
+//                    let likedAnimals = animalResponse.pets
+//                    print("Successfully fetched \(likedAnimals.count) animals")
+//                    completion(likedAnimals)
+//                case .failure(let error):
+//                    print("Error in NetworkManager.fetchAnimals: \(error)")
+//                }
+//            }
+//    }
+    
+    func getUser(completion: @escaping (User) -> Void) {
+        AF.request(endpoint + "api/users/3", method: .get)
+            .validate()
+            .responseDecodable(of: User.self, decoder: decoder) {  response in
+                switch response.result  {
+                case .success(let user):
+                    completion(user)
+                case .failure(let error):
+                    print("Error in NetworkManager.getUser: \(error)")
+                }
+  
+            }
+    }
+    
     
 }
