@@ -3,7 +3,7 @@
 Match with shelter animals to find your new best friend!
 
 ShelterSwipe is an application where you can swipe through pets available for adoption at local shelters. We hope to match every potential pet-owner with their perfect animal to foster loving relationships and decrease the number of shelter animals.
-
+![Home view](C:\Users\qiandrewj\Downloads\profile_view.jpeg "ShelterSwipe home view")
 ### Frontend requirements
 - 
 ### Backend requirements
