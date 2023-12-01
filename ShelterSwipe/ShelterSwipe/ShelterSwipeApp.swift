@@ -9,27 +9,9 @@ import SwiftUI
 
 @main
 struct ShelterSwipeApp: App {
-    @StateObject var userAuth: UserAuthModel =  UserAuthModel()
-    @StateObject var user = User(id: 0, name: "", email: "", location: "", likedPets: nil, dislikedPets: nil)
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(user)
-                .environmentObject(userAuth)
-                .onAppear {
-                    NetworkManager.shared.getUser { fetchedUser in
-                        DispatchQueue.main.async {
-                            user.id = fetchedUser.id
-                            user.name = fetchedUser.name
-                            user.email = fetchedUser.email
-                            user.location = fetchedUser.location
-                            user.likedPets = fetchedUser.likedPets
-                            user.dislikedPets = fetchedUser.dislikedPets
-                        }
-                    }
-                }
         }
     }
-    
 }

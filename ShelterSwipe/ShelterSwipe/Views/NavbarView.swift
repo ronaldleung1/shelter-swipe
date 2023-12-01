@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavbarView: View {
+    
     var body: some View {
         bar
     }
@@ -21,19 +22,24 @@ struct NavbarView: View {
                 }
 //                .toolbar(.visible, for: .tabBar)
 //                .toolbarBackground(.white, for: .tabBar)
-                        
             SavedView()
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Saved")
                 }
-
+            
+            SignOutView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Profile")
+                }
+    
         }
         .tint(.black)
         
     }
 }
 
-//#Preview {
-//    NavbarView()
-//}
+#Preview {
+    NavbarView()
+}
