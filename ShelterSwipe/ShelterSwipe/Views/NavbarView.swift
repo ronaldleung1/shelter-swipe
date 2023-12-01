@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavbarView: View {
+    
     var body: some View {
         bar
     }
@@ -27,7 +28,13 @@ struct NavbarView: View {
                     Image(systemName: "heart.fill")
                     Text("Saved")
                 }
-
+            
+            SignOutView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Profile")
+                }
+    
         }
         .tint(.black)
         
