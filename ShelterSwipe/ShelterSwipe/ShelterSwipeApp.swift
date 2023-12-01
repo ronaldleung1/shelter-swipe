@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ShelterSwipeApp: App {
     @StateObject var userAuth: UserAuthModel =  UserAuthModel()
-    @StateObject var user = User(id: 0, name: "", email: "", likedPets: nil, dislikedPets: nil)
+    @StateObject var user = User(id: 1, name: "", email: "", likedPets: nil, dislikedPets: nil)
         
     var body: some Scene {
         WindowGroup {
@@ -18,7 +18,7 @@ struct ShelterSwipeApp: App {
                 .environmentObject(userAuth)
                 .environmentObject(user)
                 .onAppear {
-                    NetworkManager.shared.getUser { fetchedUser in
+                    NetworkManager.shared.getUser(userId: user.id) { fetchedUser in
                         DispatchQueue.main.async {
                             user.id = fetchedUser.id
                             user.name = fetchedUser.name

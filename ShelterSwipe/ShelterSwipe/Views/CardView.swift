@@ -13,6 +13,7 @@ struct CardView: View {
     @State private var color = Color.clear
     @Binding var animalIndex: Int
     @Binding var animals: [Animal]
+    @EnvironmentObject var user: User
 //    private let animals = Animal.dummyData
     
     var body: some View {
@@ -61,6 +62,7 @@ struct CardView: View {
             animalIndex += 1
         case 150...500:
             //            print("liked")
+            savePet(animals[animalIndex])
             offset = CGSize(width: 500, height: 0)
             animalIndex += 1
         default:
@@ -147,6 +149,15 @@ struct CardView: View {
                 }
             }.foregroundColor(Color.purple4)
         }
+    }
+    
+    private func savePet (_ animal: Animal) {
+        NetworkManager.shared.likePet(userId: user.id, petId: animal.id) { success in
+            if success {
+                print("works. saved pet")
+            }
+        }
+
     }
     
 }

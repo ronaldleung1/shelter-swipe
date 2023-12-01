@@ -18,11 +18,12 @@ struct SavedView: View {
     
     private var scrollContent: some View {
         NavigationView {
-            List (user.likedPets ?? [], id: \.self) { animal in            ScrollView{
+            List (user.likedPets ?? [], id: \.self) { animal in            
+                ScrollView{
                     Spacer()
                     animalCell(animal)
                 }
-                .listRowBackground(Color.purple2)
+            .listRowBackground(Color.purple2)
             }
             .navigationTitle("Saved")
             .background(Color.purple2)
