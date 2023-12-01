@@ -65,6 +65,20 @@ def get_user(user_id):
         return failure_response("User not found")
     return success_response(user.serialize(), 201)
 
+@app.route('/api/users/', methods = ['GET'])
+def get_user_by_email():
+    """
+    Endpoint for getting a user by email
+    """
+    body = json.loads(request.data)
+    if body.get("email") is None:
+        return failure_response("Missing email field", 400)
+    user_email = body.get("email")
+    user = User.query.filter_by(email = user_email).first()
+    if user is None:
+        return failure_response("User not found")
+    return success_response(user.serialize(), 201)
+
 @app.route('/api/users/<int:user_id>/', methods=['POST'])
 def update_user(user_id):
     """
@@ -205,6 +219,9 @@ def update_pet(pet_id):
     pet.description = body.get("description", pet.description)
     pet.photo_url = body.get("photo_url", pet.photo_url)
     pet.shelter_id = body.get("shelter_id", pet.shelter_id)
+
+    db.session.commit()
+
     return success_response(pet.serialize())
 
 @app.route("/api/pets/<int:pet_id>/", methods = ["DELETE"])
