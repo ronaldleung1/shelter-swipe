@@ -62,6 +62,19 @@ class NetworkManager {
                }
        }
        
-       
-    
+//    func createUser(name: String, email: String, completion: @escaping (Bool) -> Void){
+//        let parameters: Parameters = ["name" : name, "email" : email] // idk if this is how to create a user with 2 parameters
+//
+//        AF.request(endpoint + "api/users/", method: .post, parameters: parameters)
+//            .responseDecodable(of: User.self, decoder: decoder) { response in
+//                switch response.result {
+//                case .success :
+//                    print("Added a new user")
+//                    completion(true)
+//                case .failure(let error):
+//                    print("Error in NetworkManager.createUser: \(error)")
+//                    completion(false)
+//                }
+//            }
+//    }
 }

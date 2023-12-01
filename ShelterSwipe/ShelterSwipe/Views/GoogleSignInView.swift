@@ -11,7 +11,8 @@ struct GoogleSignInView: View {
     
     @State var index = 0
     @EnvironmentObject var vm: UserAuthModel
-    
+    @EnvironmentObject var user: User
+
     var body: some View {
         
         GeometryReader{_ in
@@ -86,6 +87,7 @@ struct CShape1 : Shape {
 
 struct Login : View {
     @EnvironmentObject var vm: UserAuthModel
+    @EnvironmentObject var user: User
     @Binding var index : Int
     var body: some View {
         VStack{
@@ -111,7 +113,13 @@ struct Login : View {
                 
                 //BUTTON
                 Button(action: {
-                    vm.signIn()                }) {
+                    vm.signIn()
+                    if (vm.isLoggedIn){
+                        //get the user given this email address
+                        user.email = vm.emailAddress
+                        user.name = vm.givenName
+                    }
+                }) {
                     Text("LOGIN WITH GOOGLE")
                         .foregroundColor(.white)
                         .fontWeight(.bold)
@@ -144,6 +152,8 @@ struct Login : View {
 
 struct SignUp : View {
     @EnvironmentObject var vm: UserAuthModel
+    @EnvironmentObject var user: User
+
     @Binding var index : Int
     var body: some View {
         VStack{
@@ -170,8 +180,16 @@ struct SignUp : View {
                 //BUTTON
                 Button(action: {
                     vm.signIn()
-//                    vm.emailAddress
-//                    vm.givenName
+//                    if (vm.isLoggedIn){
+                        // create a user and
+//                        let name = vm.givenName
+//                        let email = vm.emailAddress
+//                        NetworkManager.shared.createUser(name: name, email: email) { success in
+//                            if success {
+//                                print("created a user")
+//                            }
+//                        }
+//                    }
                 }) {
                     Text("SIGNUP WITH GOOGLE")
                         .foregroundColor(.white)
