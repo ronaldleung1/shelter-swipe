@@ -140,6 +140,7 @@ struct CardView: View {
             Text("Species: \(animal.species)")
             Text("Breed: \(animal.breed)")
             Text("Age: \(String(animal.age)) years old")
+            Text("Gender: \(animal.gender)")
             if let description = animal.description {
                 Text("Description: \(description)")
             }

@@ -40,6 +40,6 @@ struct NavbarView: View {
     }
 }
 
-#Preview {
-    NavbarView()
-}
+//#Preview {
+//    NavbarView()
+//}

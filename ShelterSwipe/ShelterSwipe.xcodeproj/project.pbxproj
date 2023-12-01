@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3695BEC62B198FCE0002FFC5 /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3695BEC52B198FCE0002FFC5 /* UserAuthModel.swift */; };
 		3695BECB2B19B77C0002FFC5 /* GoogleSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3695BECA2B19B77C0002FFC5 /* GoogleSignInView.swift */; };
 		3695BECF2B1A71D60002FFC5 /* SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3695BECE2B1A71D60002FFC5 /* SignOutView.swift */; };
+		3695BED12B1A79A20002FFC5 /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3695BED02B1A79A20002FFC5 /* UserAuthModel.swift */; };
 		58980103B6F878FA21D19F34 /* Pods_ShelterSwipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD06CC0884AB7478C73E631 /* Pods_ShelterSwipe.framework */; };
 		C333255D2B103EA4000BE3D3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C333255C2B103EA4000BE3D3 /* CardView.swift */; };
 		C348F31A2B19622D00E0F0E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C348F3192B19622D00E0F0E1 /* User.swift */; };
@@ -48,10 +48,10 @@
 
 /* Begin PBXFileReference section */
 		05A017BFA4C7638250082E21 /* Pods-ShelterSwipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelterSwipe.release.xcconfig"; path = "Target Support Files/Pods-ShelterSwipe/Pods-ShelterSwipe.release.xcconfig"; sourceTree = "<group>"; };
-		3695BEC52B198FCE0002FFC5 /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
 		3695BEC72B198FFE0002FFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3695BECA2B19B77C0002FFC5 /* GoogleSignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleSignInView.swift; path = ../../../../GoogleSignInView.swift; sourceTree = "<group>"; };
 		3695BECE2B1A71D60002FFC5 /* SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutView.swift; sourceTree = "<group>"; };
+		3695BED02B1A79A20002FFC5 /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
 		8CD06CC0884AB7478C73E631 /* Pods_ShelterSwipe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShelterSwipe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C333255C2B103EA4000BE3D3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C348F3192B19622D00E0F0E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 				C3D6CEF42B0AA1EE00C266FF /* Animal.swift */,
 				C3565E7D2B16FCAE0069CC50 /* AnimalResponse.swift */,
 				C348F3192B19622D00E0F0E1 /* User.swift */,
-				3695BEC52B198FCE0002FFC5 /* UserAuthModel.swift */,
+				3695BED02B1A79A20002FFC5 /* UserAuthModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,7 +395,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3695BEC62B198FCE0002FFC5 /* UserAuthModel.swift in Sources */,
 				C3565E7E2B16FCAE0069CC50 /* AnimalResponse.swift in Sources */,
 				C3CF618B2B183B39009F5B02 /* HomeView.swift in Sources */,
 				C3CF61892B1829C8009F5B02 /* NavbarView.swift in Sources */,
@@ -408,6 +407,7 @@
 				C37C03D02B099F620097B4AF /* ShelterSwipeApp.swift in Sources */,
 				3695BECB2B19B77C0002FFC5 /* GoogleSignInView.swift in Sources */,
 				C37C03FA2B09A1E60097B4AF /* SavedView.swift in Sources */,
+				3695BED12B1A79A20002FFC5 /* UserAuthModel.swift in Sources */,
 				C333255D2B103EA4000BE3D3 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
