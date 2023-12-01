@@ -177,6 +177,7 @@ def create_pet():
         breed = body.get("breed"),
         age = body.get("age"),
         gender = body.get("gender"),
+        location = body.get("location"),
         description = body.get("description"),
         photo_url = body.get("photo_url"),
         shelter_id = body.get("shelter_id")
@@ -184,6 +185,38 @@ def create_pet():
     db.session.add(new_pet)
     db.session.commit()
     return success_response(new_pet.serialize(), 201)
+
+@app.route("/api/pets/<int:pet_id>/", methods = ["POST"])
+def update_pet(pet_id):
+    """
+    Endpoint for updating a pet
+    """
+    body = json.loads(request.data)
+    pet = Pet.query.filter_by(id=pet_id).first()
+    if pet is None:
+        return failure_response("Pet not found")
+    pet.name = body.get("name", pet.name)
+    pet.species = body.get("species", pet.species)
+    pet.breed = body.get("breed", pet.breed)
+    pet.age = body.get("age", pet.age)
+    pet.gender = body.get("gender", pet.gender)
+    pet.location = body.get("location", pet.location)
+    pet.description = body.get("description", pet.description)
+    pet.photo_url = body.get("photo_url", pet.photo_url)
+    pet.shelter_id = body.get("shelter_id", pet.shelter_id)
+    return success_response(pet.serialize())
+
+@app.route("/api/pets/<int:pet_id>/", methods = ["DELETE"])
+def delete_pet(pet_id):
+    """
+    Endpoint for deleting a pet
+    """
+    pet = Pet.query.filter_by(id=pet_id).first()
+    if pet is None:
+        return failure_response("Pet not found")
+    db.session.delete(pet)
+    db.session.commit()
+    return success_response(pet.serialize())
 
 # SHELTER ROUTES -----------------------------------------
 @app.route("/api/shelters/", methods = ["GET"])
