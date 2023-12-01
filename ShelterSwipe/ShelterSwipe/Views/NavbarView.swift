@@ -22,7 +22,6 @@ struct NavbarView: View {
                 }
 //                .toolbar(.visible, for: .tabBar)
 //                .toolbarBackground(.white, for: .tabBar)
-                        
             SavedView()
                 .tabItem {
                     Image(systemName: "heart.fill")
@@ -41,6 +40,6 @@ struct NavbarView: View {
     }
 }
 
-//#Preview {
-//    NavbarView()
-//}
+#Preview {
+    NavbarView()
+}
