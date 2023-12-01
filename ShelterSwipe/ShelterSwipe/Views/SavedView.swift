@@ -10,7 +10,7 @@ import SwiftUI
 struct SavedView: View {
     @EnvironmentObject var user: User
     //    private let animals: [Animal] = Animal.dummyData
-    @State private var animals: [Animal] = []
+//    @State private var animals: [Animal] = []
     
     var body: some View {
         scrollContent
