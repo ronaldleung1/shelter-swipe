@@ -5,3 +5,5 @@ services:
     image: "qiandrewj/shelter-swipe"
     ports:
       - "80:8000"
+    # volumes:
+    #   - usr/app/instance:/go/src/beginnerapp/local-db
